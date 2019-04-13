@@ -9,13 +9,10 @@
     rdfs:label "Data"@en ;
     rdfs:isDefinedBy <http:/ourdomain.com/pmr/0.1/> ;
 
-
 :requestFrom a owl:ObjectProperty ;
     rdfs:label "request from"@en ;
     rdfs:comment "Used to define the source of the request"@en ;
     rdfs:isDefinedBy <http:/ourdomain.com/pmr/0.1/> .
-
-
 
 <http:/ourdomain.com/pmr/0.1/> . a owl:Ontology ;
     rdfs:label "Ontology for pReq"@en ;
