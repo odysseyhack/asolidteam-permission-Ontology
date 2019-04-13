@@ -7,7 +7,7 @@
 
 :Data a owl:Class ;
     rdfs:label "Data"@en ;
-    rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> ;
+    rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
 :requestFrom a owl:ObjectProperty ;
     rdfs:label "request from"@en ;
