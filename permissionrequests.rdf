@@ -9,10 +9,26 @@
     rdfs:label "Data"@en ;
     rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
+:HealthData a owl:Class ; 
+    rdfs:label "Health Data"@en ; 
+    rdfs:comment "Describe which type of data is requested" ; 
+    rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> ; 
+    rdfs:subClassOf :Data . 
+
+:DataRequest a owl:Class ;
+    rdfs:label "Data Request"@en ;
+    rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
+
 :requestFrom a owl:ObjectProperty ;
     rdfs:label "request from"@en ;
     rdfs:comment "Used to define the source of the request"@en ;
     rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
+
+:requestDataType a owl:ObjectProperty ;
+    rdfs:label "requested data type"@en ;
+    rdfs:comment "Used to define the type of data requested"@en ;
+    rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
+
 
 <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> . a owl:Ontology ;
     rdfs:label "Ontology for pReq"@en ;
