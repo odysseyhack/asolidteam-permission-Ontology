@@ -2,23 +2,33 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/>.
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+
+
+<!-- Classes -->
 :Data a owl:Class ;
     rdfs:label "Data"@en ;
     rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
-:HealthData a owl:Class ; 
-    rdfs:label "Health Data"@en ; 
-    rdfs:comment "Describe which type of data is requested" ; 
-    rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> ; 
-    rdfs:subClassOf :Data . 
+:HealthData a owl:Class ;
+    rdfs:label "Health Data"@en ;
+    rdfs:comment "Describe which type of data is requested" ;
+    rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> ;
+    rdfs:subClassOf :Data .
 
 :DataRequest a owl:Class ;
     rdfs:label "Data Request"@en ;
     rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
+:Description a owl:Class ;
+  rdfs:label "Description"@en;
+  rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
+
+
+<!-- ObjectProperties -->
 :requestFrom a owl:ObjectProperty ;
     rdfs:label "request from"@en ;
     rdfs:comment "Used to define the source of the request"@en ;
@@ -34,12 +44,23 @@
     rdfs:comment "shows status of request";
     rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
+:wasSent a owl:ObjectProperty;
+    rdfs:label "was sent";
+    rdfs:comment "timestamp when the request got sent";
+    rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/>;
+
+:expires a owl:ObjectProperty;
+    rdfs:label "expires";
+    rdfs:comment "timestamp when Access would expire";
+    rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/>;
+
 :requestDataType a owl:ObjectProperty ;
     rdfs:label "requested data type"@en ;
     rdfs:comment "Used to define the type of data requested"@en ;
     rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
 
+<!-- Ontology -->
 <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> . a owl:Ontology ;
     rdfs:label "Ontology for pReq"@en ;
     rdfs:comment "Ontology for pReq based on Odyssey"@en ;
