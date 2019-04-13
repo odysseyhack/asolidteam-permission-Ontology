@@ -24,6 +24,12 @@
     rdfs:comment "Used to define the source of the request"@en ;
     rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
+:requests a owl:ObjectProperty;
+    rdfs:label "request resource"@en;
+    rdfs:comment "used to request specific resource";
+    rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
+
+
 :requestDataType a owl:ObjectProperty ;
     rdfs:label "requested data type"@en ;
     rdfs:comment "Used to define the type of data requested"@en ;
