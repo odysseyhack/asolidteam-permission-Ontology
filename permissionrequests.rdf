@@ -1,4 +1,4 @@
-@prefix : <http:/ourdomain.com/pmr/0.1/> .
+@prefix : <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -7,14 +7,14 @@
 
 :Data a owl:Class ;
     rdfs:label "Data"@en ;
-    rdfs:isDefinedBy <http:/ourdomain.com/pmr/0.1/> ;
+    rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> ;
 
 :requestFrom a owl:ObjectProperty ;
     rdfs:label "request from"@en ;
     rdfs:comment "Used to define the source of the request"@en ;
-    rdfs:isDefinedBy <http:/ourdomain.com/pmr/0.1/> .
+    rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
-<http:/ourdomain.com/pmr/0.1/> . a owl:Ontology ;
+<https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> . a owl:Ontology ;
     rdfs:label "Ontology for pReq"@en ;
     rdfs:comment "Ontology for pReq based on Odyssey"@en ;
     owl:versionInfo "WiP"@en .
