@@ -29,6 +29,10 @@
     rdfs:comment "used to request specific resource";
     rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
+:hasStatus a owl:ObjectProperty;
+    rdfs:label "Status"@en;
+    rdfs:comment "shows status of request";
+    rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
 :requestDataType a owl:ObjectProperty ;
     rdfs:label "requested data type"@en ;
