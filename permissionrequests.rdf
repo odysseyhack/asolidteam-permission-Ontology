@@ -32,7 +32,8 @@
 :DataAnalysis a owl:Class;
   rdfs:subClassOf :Indent;
   rdfs:label "Data Analysis"@en;
-  :risklevel "high"@en;
+  :privacyRisklevel "high"@en;
+  :fincialRisklevel "low"@en;
   rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
 <!-- ObjectProperties -->
@@ -71,9 +72,27 @@
     rdfs:comment "Used to define the type of data requested"@en ;
     rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
-:privacyRiskevel a owl:ObjectProperty ;
+:risklevel a owl:Property;
+    rdfs:label "risklevel";
+    rdfs:comment "Parent class of Risk"@en ;
+    rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
+
+:privacyRisklevel a owl:ObjectProperty ;
+    rdfs:subPropertyOf :risklevel;
     rdfs:label "privacy risklevel";
     rdfs:comment "Shows the privacy risk of the asked permissions"@en ;
+    rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
+
+:fincialRisklevel a owl:ObjectProperty ;
+    rdfs:subPropertyOf :risklevel;
+    rdfs:label "finical risklevel";
+    rdfs:comment "Shows the finical risk of the asked permissions"@en ;
+    rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
+
+:legalRisklevel a owl:ObjectProperty ;
+    rdfs:subPropertyOf :risklevel;
+    rdfs:label "legal risklevel";
+    rdfs:comment "Shows the legal risk of the asked permissions"@en ;
     rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
 
