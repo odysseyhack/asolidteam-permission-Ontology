@@ -1,11 +1,8 @@
 @prefix : <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix terms: <http://purl.org/dc/terms/>.
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
 
 
 <!-- Classes -->
@@ -21,12 +18,21 @@
 
 :DataRequest a owl:Class ;
     rdfs:label "Data Request"@en ;
+    rdfs:comment "specifes that the Notification is a Data Request" ;
     rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
 :Description a owl:Class ;
   rdfs:label "Description"@en;
   rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
+:Indent a owl:Class ;
+  rdfs:label "Indent"@en;
+  rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
+
+:DataAnalysis a owl:Class;
+  rdf:type :Indent;
+  rdfs:label "Data Analysis"@en;
+  rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
 <!-- ObjectProperties -->
 :requestFrom a owl:ObjectProperty ;
@@ -44,14 +50,19 @@
     rdfs:comment "shows status of request";
     rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
-:wasSent a owl:ObjectProperty;
-    rdfs:label "was sent";
+:wasSentOn a owl:ObjectProperty;
+    rdfs:label "was sent on ";
     rdfs:comment "timestamp when the request got sent";
     rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/>;
 
 :expires a owl:ObjectProperty;
     rdfs:label "expires";
     rdfs:comment "timestamp when Access would expire";
+    rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/>;
+
+:hasIntent a owl:ObjectProperty;
+    rdfs:label "has intent";
+    rdfs:comment "shows what the data will be used for";
     rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/>;
 
 :requestDataType a owl:ObjectProperty ;
