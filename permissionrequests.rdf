@@ -30,8 +30,9 @@
   rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
 :DataAnalysis a owl:Class;
-  rdf:type :Indent;
+  rdfs:subClassOf :Indent;
   rdfs:label "Data Analysis"@en;
+  :risklevel "high"@en;
   rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
 <!-- ObjectProperties -->
@@ -68,6 +69,11 @@
 :requestDataType a owl:ObjectProperty ;
     rdfs:label "requested data type"@en ;
     rdfs:comment "Used to define the type of data requested"@en ;
+    rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
+
+:privacyRiskevel a owl:ObjectProperty ;
+    rdfs:label "privacy risklevel";
+    rdfs:comment "Shows the privacy risk of the asked permissions"@en ;
     rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
 
