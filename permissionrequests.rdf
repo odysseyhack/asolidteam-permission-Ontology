@@ -34,7 +34,7 @@
   rdfs:label "Data Analysis"@en;
   rdfs:comment "Data gets used for Data Analysis" ;
   :privacyRisklevel "high"@en;
-  :fincialRisklevel "low"@en;
+  :financialRisklevel "low"@en;
   :legalRisklevel "low"@en;
   rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
     
@@ -43,7 +43,7 @@
   rdfs:label "Finical Records"@en;
   rdfs:comment "Data gets used tp check your Finical Records" ;
   :privacyRisklevel "high"@en;
-  :fincialRisklevel "high"@en;
+  :financialRisklevel "high"@en;
   :legalRisklevel "medium"@en;
   rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
