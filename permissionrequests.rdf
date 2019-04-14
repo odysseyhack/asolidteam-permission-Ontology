@@ -32,9 +32,29 @@
 :DataAnalysis a owl:Class;
   rdfs:subClassOf :Indent;
   rdfs:label "Data Analysis"@en;
+  rdfs:comment "Data gets used for Data Analysis" ;
   :privacyRisklevel "high"@en;
   :fincialRisklevel "low"@en;
+  :legalRisklevel "low"@en;
   rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
+
+  :DataAnalysis a owl:Class;
+    rdfs:subClassOf :Indent;
+    rdfs:label "Data Analysis"@en;
+    rdfs:comment "Data gets used for Data Analysis" ;
+    :privacyRisklevel "high"@en;
+    :fincialRisklevel "low"@en;
+    :legalRisklevel "low"@en;
+    rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
+
+    :FinicalRecords a owl:Class;
+      rdfs:subClassOf :Indent;
+      rdfs:label "Finical Records"@en;
+      rdfs:comment "Data gets used tp check your Finical Records" ;
+      :privacyRisklevel "high"@en;
+      :fincialRisklevel "high"@en;
+      :legalRisklevel "medium"@en;
+      rdfs:isDefinedBy <https://a-solid-web.github.io/permission-ontology/permissionrequests.rdf/> .
 
 <!-- ObjectProperties -->
 :requestFrom a owl:ObjectProperty ;
